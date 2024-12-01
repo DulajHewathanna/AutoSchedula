@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Table - Mazer Admin Dashboard</title>
+    
+    <link rel="stylesheet" href="assets/css/main/app.css">
+    <link rel="stylesheet" href="assets/css/main/app-dark.css">
+    <link rel="shortcut icon" href="assets/images/logo/favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/logo/favicon.png" type="image/png">
+    
+    <style>
+        /* General Styles */
+        body {
+            background-color: #f0f8ff;
+        }
+
+        h3 {
+            color: #6c63ff;
+        }
+
+        .form-control {
+            background-color: #fdf2e9;
+            border: 1px solid #fd7e14;
+            color: #212529;
+        }
+
+        .form-control:hover, .form-control:focus {
+            border-color: #ff5733;
+        }
+
+        /* Card Header */
+        .card-header {
+            background-color: #d1e7dd;
+            color: #0f5132;
+        }
+
+        /* Colorful Table Rows */
+        .table-bordered tbody tr:nth-child(odd) {
+            background-color: #ffebcd;
+        }
+
+        .table-bordered tbody tr:nth-child(even) {
+            background-color: #faebd7;
+        }
+
+        .table-striped tbody tr:nth-child(odd) {
+            background-color: #ffdead;
+        }
+
+        .table-striped tbody tr:nth-child(even) {
+            background-color: #f5deb3;
+        }
+
+        /* Hover Effect */
+        .table tbody tr:hover {
+            background-color: #add8e6;
+            color: #000;
+        }
+
+        /* Dropdown Style */
+        #batchSelect {
+            background-color: #ffe4b5;
+            border: 1px solid #daa520;
+            color: #000;
+        }
+
+        #batchSelect:hover {
+            border-color: #ffa500;
+        }
+
+        /* Sidebar Highlight */
+        .sidebar-item.active {
+            background-color: #ff5733;
+            color: white;
+        }
+
+        .sidebar-link:hover {
+            background-color: #ff4500;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div id="sidebar" class="active">
+            <div class="sidebar-wrapper active">
+                <!-- Sidebar Code -->
+            </div>
+        </div>
+        <div id="main">
+            <header class="mb-3">
+                <a href="#" class="burger-btn d-block d-xl-none">
+                    <i class="bi bi-justify fs-3"></i>
+                </a>
+            </header>
+            
+            <div class="page-heading">
+                <div class="page-title">
+                    <div class="row">
+                        <div class="col-12 col-md-6 order-md-1 order-last">
+                            <h3>ADD BATCH</h3>
+                        </div>
+                        <div class="col-12 col-md-6 order-md-2 order-first">
+                            <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Table</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Basic Tables start -->
+                <section class="section">
+                    <div class="row" id="basic-table">
+                        <!-- Dropdown for Batch Selection -->
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label for="batchSelect">Select Batch:</label>
+                                <select class="form-control" id="batchSelect" onchange="filterTimetable()">
+                                    <option value="all">All Batches</option>
+                                    <option value="A">Batch A</option>
+                                    <option value="B">Batch B</option>
+                                    <option value="C">Batch C</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Timetable Tables -->
+                        <div class="col-12 col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Timetable with Outer Spacing</h4>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Batch</th>
+                                                <th>Day</th>
+                                                <th>9:00 AM - 10:00 AM</th>
+                                                <th>10:00 AM - 11:00 AM</th>
+                                                <th>11:00 AM - 12:00 PM</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="batch-row" data-batch="A">
+                                                <td>A</td>
+                                                <td>Monday</td>
+                                                <td>Math</td>
+                                                <td>English</td>
+                                                <td>Science</td>
+                                            </tr>
+                                            <tr class="batch-row" data-batch="B">
+                                                <td>B</td>
+                                                <td>Wednesday</td>
+                                                <td>English</td>
+                                                <td>Chemistry</td>
+                                                <td>Computer</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
