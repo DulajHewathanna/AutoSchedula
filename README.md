@@ -71,20 +71,20 @@ To get a local copy up and running, follow these simple steps.
    npm install
    npx react-native run-android # For Android
    npx react-native run-ios # For iOS (if using macOS)
+   
 3. Database Setup:
 - Set up a MySQL database and configure the connection details in the backend's application properties file.
 ## Database
 AutoSchedula uses MySQL to store timetable data, user information, and other relevant information.
+
 ## Usage
 1. Login as an administrator to access timetable generation features.
 2. Manage Timetables: Configure, add, or edit timetable slots for students and lecturers.
 3. Mobile Access: Students and lecturers can view their personalized timetables on the mobile app.
 ##Contributing
 Contributions are welcome! Please fork this repository and create a pull request for any feature requests or improvements.
-##License
-Distributed under the MIT License. See LICENSE for more information.
- ```bash
-This code provides the content for your `README.md` file in markdown format. Just copy and paste it into your file in your GitHub repository. Let me know if there's anything else you need!
+
+##Screenshots
 
 ![Screenshot 2024-12-01 151007](https://github.com/user-attachments/assets/1b6d8682-f708-4523-a0a6-64e91a1a9f64)
 
